@@ -1,0 +1,6 @@
+Admin Interface:
+	1. Monitor Coins Left
+	2. Change bottle pricing
+
+User Interface:
+	1. Calculate total acquired rewards
