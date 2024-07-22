@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kwarta Sa Botelya - Admin</title>
+    <link href="/static/bootstrap5.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/bootstrap5-bundle.js"></script>
+  </head>
+
+  <body>
+    <div
+      class="container min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="col">
+        <!--
+        <div class="row mb-5">
+          <div class="card shadow">
+            <div class="card-header bg-warning fw-bold">Coins left</div>
+            <div class="card-body">
+              <p class="h1 text-center">0</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        end of div-->
+
+        <!---->
+        <div class="row">
+          <div class="card shadow">
+            <div class="card-header bg-warning fw-bold">Bottles Pricing</div>
+            <div class="card-body">
+              <div class="row">
+                <!--plastic-->
+                <div class="col">
+                  <h3 class="text-center">Plastic</h3>
+                  <div class="card p-2">
+                    <p>
+                      190 m.l. - ₱
+                      <input type="number" name="" />
+                    </p>
+                    <p>290 m.l. - ₱ <input type="number" name="" /></p>
+                    <p>500 m.l. - ₱ <input type="number" min="1" /></p>
+                    <p>1 liter - ₱ <input type="number" min="1" /></p>
+                    <p>10 liter - ₱ <input type="number" min="1" /></p>
+                  </div>
+                </div>
+                <!--end-->
+
+                <!--glass-->
+                <div class="col">
+                  <h3 class="text-center">Glass</h3>
+                  <div class="card p-2">
+                    <p>250 m.l. - ₱ <input type="text" /></p>
+                    <p>375 m.l. - ₱ <input type="text" name="" id="" /></p>
+                    <p>750 m.l. - ₱ <input type="text" name="" id="" /></p>
+                  </div>
+                </div>
+                <!--end-->
+              </div>
+            </div>
+            <button
+              class="btn btn-warning mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#saveChangesModal"
+            >
+              Save Changes
+            </button>
+          </div>
+        </div>
+        <!--end of div-->
+      </div>
+    </div>
+
+    <!-- Save Changes Modal -->
+    <div
+      class="modal"
+      id="saveChangesModal"
+      tabindex="-1"
+      aria-labelledby="saveChangesModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirm Changes</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-warning">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

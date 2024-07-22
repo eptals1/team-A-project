@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User-U.I.</title>
+    <link rel="stylesheet" href="/static/bootstrap5.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/bootstrap5-bundle.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid py-5 px-0">
+      <div class="row">
+        <!--Camera, bottle counter, total reward, get reward-->
+        <div class="col-md-7">
+          <div class="container">
+            <div class="card shadow">
+              <!--Camera-->
+              <div class="row">
+                <div
+                  class="container border border-5 mt-3 d-flex justify-content-center align-items-center"
+                  style="width: 200px; height: 200px"
+                >
+                  <p class="text-center">Camera</p>
+                </div>
+              </div>
+              <!--end-->
+              &nbsp;
+              <!-- bottle counter -->
+              <div class="row mt-3">
+                <div class="container" style="width: 400px">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card">
+                        <div class="card-header">
+                          <p class="text-center">Plastic</p>
+                        </div>
+                        <div class="card-body">
+                          <p class="text-center h1">-</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card">
+                        <div class="card-header">
+                          <p class="text-center">Glass</p>
+                        </div>
+                        <div class="card-body">
+                          <p class="text-center h1">-</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end-->
+              &nbsp;
+              <!--total reward-->
+              <div class="row">
+                <div class="container px-5 py-2">
+                  <p class="fw-bold text-center h1">TOTAL : ₱--.00</p>
+                </div>
+              </div>
+              <!--end-->
+              &nbsp;
+              <!--get reward-->
+              <div class="row">
+                <div
+                  class="container-fluid"
+                  style="width: 500px; height: 150px"
+                >
+                  <p class="text-center h5">Click to Claim Reward</p>
+                  <div
+                    class="container d-flex justify-content-center align-items-center text-center"
+                  >
+                    <div class="row">
+                      <!-- Claim via (maya) -->
+                      <div class="col-md mb-2">
+                        <button
+                          class="btn m-0 p-0"
+                          data-bs-toggle="modal"
+                          data-bs-target="#availableSoonModal"
+                        >
+                          <img
+                            src="/static/assets/images/maya_logo.png"
+                            alt=""
+                            class="rounded-image"
+                          />
+                        </button>
+                      </div>
+
+                      <!-- Claim (cash) -->
+                      <div class="col-md mb-2">
+                        <button
+                          class="btn btn-warning mt-0 fw-bold"
+                          data-bs-toggle="modal"
+                          data-bs-target="#getRewardInCash"
+                          style="
+                            height: 100px;
+                            width: 100px;
+                            border-radius: 15px;
+                            border-style: groove;
+                            border-color: black;
+                          "
+                        >
+                          <img
+                            src="/static/assets/images/pesoicon.png"
+                            alt=""
+                            height="63px"
+                            width="63px"
+                          />
+                          CASH
+                        </button>
+                      </div>
+                      <!--end-->
+                      <!-- Claim via (gcash) -->
+                      <div class="col-md">
+                        <button
+                          class="btn m-0 p-0"
+                          data-bs-toggle="modal"
+                          data-bs-target="#availableSoonModal"
+                        >
+                          <img
+                            src="/static/assets/images/GCash_Logo.png"
+                            alt=""
+                            class="rounded-image"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end-->
+        <!-- Price List-->
+        <div class="col-md-5">
+          <div class="container">
+            <div class="card shadow">
+              <div class="card-header">
+                <p class="text-center fw-bold h3">Bottles Price List</p>
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered table-light">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Size</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>....</td>
+                      <td>....</td>
+                      <td>....</td>
+                      <td>....</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+    </div>
+
+    <!-- get reward modal-->
+    <div class="modal fade" id="getRewardInCash">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cash to be received:</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <p class="fw-bold h3 text-center">₱--.00</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary">Claim now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-->
+    <!-- available soon modal-->
+    <div class="modal fade" id="availableSoonModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Available Soon!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Okay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-->
+  </body>
+</html>
